@@ -1,0 +1,78 @@
+/* always defaykt margin and padding  */
+
+body {
+    background: white;
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    margin:0px;
+    padding:0px;
+}
+
+.section1 {
+    background-color: lightblue;
+    color:black;
+    /* text color */
+    margin:0px;
+    padding:0px;
+    border:0px;
+
+
+}
+
+
+header {
+    display:flex;
+    justify-content: space-between;
+    /* put space between main items */
+    align-items: center;
+    /* center items */
+/* need to udnerstand justify content and align items better */
+    padding: 0px;
+
+}
+
+.header-logo {
+    margin-left:200px;
+    /* for styling */
+}
+
+.header-logo img {
+    vertical-align: middle;
+    margin-right: 0px;
+    /* margin on the right side from space to text */
+}
+
+.header-logo a {
+    /* styling for link element */
+    text-decoration: none;
+    color: black; /* Set the color for the "Header Logo" text */
+    font-size: 24px; /* Example size for the logo text */
+    font-weight: bold;
+}
+
+nav {
+    margin-right:600px;
+}
+
+nav ul {
+    display:flex;
+    /* flexbox in a flexbox  */
+    list-style: none;
+    /* no bullet points */
+    margin:0;
+    padding:0;
+}
+/* make unorder list flexbox and remove margin padding */
+
+nav li {
+    margin-left:40px;
+}
+/* move left to middle  */
+
+nav a {
+    text-decoration: none;
+    /* underline form links */
+    /* color: */
+    font-size:16px;
+
+}
