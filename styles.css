@@ -76,3 +76,141 @@ nav a {
     font-size:16px;
 
 }
+
+.other-content {
+    background-color: lightpink;
+    align-items: center;
+    display:flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+.column {
+    display:flex;
+    flex-direction:column;
+    margin-left: 200px;
+    padding:0px;
+}
+
+.no-column {
+    /*  */
+
+}
+
+.no-column img {
+    margin-left:1000px;
+}
+
+.section2 {
+    background-color:aqua;
+    display:flex;
+    margin:0;
+    padding:0;
+    align-items: center;
+    flex-direction: column;
+    /* section 2 css */
+}
+
+.section2 h1 {
+    text-align: center;
+}
+
+.master-box {
+    display:flex;
+    gap:26px;
+
+}
+
+.master-subtext {
+    display:flex;
+    gap:32px;
+}
+
+
+/* so im thinking with mastr box and section 2 the boxes become flex elements of master box and then header and master box are flex elements of section 2 which works for column */
+
+
+/* .box {
+     ... other styles ...
+    border: 2px solid blue;  Creates the blue outline 
+    border-radius: 8px;  Creates the rounded corners 
+     ... other styles ... 
+    height:100px;
+    margin:16px;
+  } 
+
+.subtext {
+     subtext css 
+} */
+
+/* gpt css just trying not much of a difference at all cant get close to the original  */
+.box {
+    border: 2px solid blue; /* Or a similar shade of blue */
+    border-radius: 16px; /* Or a similar level of roundedness */
+    height: 100px; /* Adjusts to content height */
+    width: 100px; /* Adjusts to content width or a set width */
+
+    /* NO MARGIN becuse gap on parent */
+
+    /* if i wanted content inside  */
+    display: flex; /* To control alignment of content inside */
+    flex-direction: column; /* Stack content vertically (illustration area, text) */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text within its own area */
+  }
+  
+
+  
+  .subtext {
+    font-size: 0.8em; /* Or a specific font size */
+    color: #333; /* Or a specific text color */
+    text-align: center;
+    /* inline level contnt not block so we dont need to align box again */
+  }
+
+  .section3 {
+    background-color: blueviolet;
+    display:flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .quote {
+    max-width:600px;
+    /* margin:1em auto; */
+    /* top bottom is 1 em if font size is 16px then em is 16px unique to css , auto left right distrube the horizontal space evenly on both sides  */
+
+  }
+
+  .quote blockquote {
+    margin: 0; /* Remove default top and bottom margin from blockquote */
+    padding: 0; /* Remove default padding from blockquote */
+}
+
+
+  .quote p {
+    font-size: large;
+    margin:0;
+    padding:0;
+  }
+
+  .quote figcaption{
+    font-size:1.1em;
+    font-weight:bold;
+    color:#333;
+    margin-left: 400px;
+    /* darker color */
+    margin-top: 0; /* Remove or reduce the space above figcaption */
+    padding: 0; /* Remove default padding from figcaption */
+  }
+  cite {
+    font-style: normal;
+    margin:0;
+    padding:0;
+    /* make fotn style normal incase it becomes italic from figcatpion */
+  }
