@@ -1,105 +1,114 @@
 /* always defaykt margin and padding  */
 
 body {
-    background: white;
-    color:black;
-    font-family: 'Times New Roman', Times, serif;
-    margin:0px;
-    padding:0px;
+    font-family: 'Roboto', Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0; 
 }
 
-.section1 {
-    background-color: lightblue;
-    color:black;
-    /* text color */
-    margin:0px;
-    padding:0px;
-    border:0px;
-
-
+/* adding 100 percent to html and vody then flex and flex direction column
+ensrues full 100 percent heigh */
+.header , .section1, .section2,.section3 , .section4,.footer {
+    padding:0 12vw;
+    /* vw viewport width on top bottom  */
 }
-
 
 header {
+    background-color: #1f2937;
     display:flex;
     justify-content: space-between;
-    /* put space between main items */
     align-items: center;
-    /* center items */
-/* need to udnerstand justify content and align items better */
-    padding: 0px;
-
+    padding: 0px 25px;
 }
 
 .header-logo {
-    margin-left:200px;
-    /* for styling */
-}
+    display:flex;
+    color: #f9faf8;
+    font-size: 24px;
+    font-weight: 800;
+    margin:0px;
+    padding:0px;
 
-.header-logo img {
-    vertical-align: middle;
-    margin-right: 0px;
-    /* margin on the right side from space to text */
 }
 
 .header-logo a {
-    /* styling for link element */
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    color:inherit;
+    gap:10px;
+}
+
+.link {
+    display:flex;
     text-decoration: none;
-    color: black; /* Set the color for the "Header Logo" text */
-    font-size: 24px; /* Example size for the logo text */
+    /* removes underline form links */
+    color: #f9faf8;
+    font-size: 12px; 
     font-weight: bold;
-}
-
-nav {
-    margin-right:600px;
-}
-
-nav ul {
-    display:flex;
-    /* flexbox in a flexbox  */
-    list-style: none;
-    /* no bullet points */
-    margin:0;
-    padding:0;
-}
-/* make unorder list flexbox and remove margin padding */
-
-nav li {
-    margin-left:40px;
-}
-/* move left to middle  */
-
-nav a {
-    text-decoration: none;
-    /* underline form links */
-    /* color: */
-    font-size:16px;
-
-}
-
-.other-content {
-    background-color: lightpink;
-    align-items: center;
-    display:flex;
-    margin: 0;
-    padding: 0;
-
-}
-
-.column {
-    display:flex;
-    flex-direction:column;
-    margin-left: 200px;
+    margin:0px;
     padding:0px;
+    gap:20px;
+    list-style:none;
+    /* removes bullets and numbers */
 }
 
-.no-column {
-    /*  */
-
+li a {
+    text-decoration:none;
+    color: #e5e7eb;
 }
 
-.no-column img {
-    margin-left:1000px;
+
+
+.section1 {
+    display:flex;
+    flex:1;
+    /* flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+    flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+    flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                         take up screen as per the screen size available for
+                         e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+    background-color: #1f2937;
+    margin:0px;
+    padding: 125px 0px;
+    justify-content: space-between;
+    align-items:center;
+    gap:50px
+}
+
+
+.column-elements {
+    flex:1;
+    /* flex-direction:column;
+    margin-left: 200px;
+    padding:0px; */
+}
+
+.column-elements h1 {
+    color: #f9faf8;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+}
+
+.column-elements p {
+    color: #e5e7eb;
+    padding: 0;
+    margin: 0;
+}
+
+.column-elements button {
+    color: #f9faf8;
+    font-size:18px;
+    font-weight:800;
+    background-color:#3882f6;
+    border:none;
+    border-radius:4px;
+    padding:8px 20px;
+    margin-top:10px;
+    /* rounds corners */
 }
 
 .section2 {
@@ -110,7 +119,15 @@ nav a {
     align-items: center;
     flex-direction: column;
     /* section 2 css */
+
 }
+
+.no-column-elements img {
+    max-width:400px;
+    border-radius:20px;
+}
+
+/* explanation of why i didnt need flex-direction column */
 
 .section2 h1 {
     text-align: center;
@@ -119,12 +136,13 @@ nav a {
 .master-box {
     display:flex;
     gap:26px;
-
+    
 }
 
 .master-subtext {
     display:flex;
     gap:32px;
+
 }
 
 
@@ -214,3 +232,49 @@ nav a {
     padding:0;
     /* make fotn style normal incase it becomes italic from figcatpion */
   }
+
+
+.section4 {
+    display:flex;
+    background-color:lightblue;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding:0;
+}
+
+.section4 .container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:20px auto;
+    padding:0;
+    border: 4px solid blue;
+}
+
+.section4 .rectangle {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding:0;
+    flex-direction: column;
+}
+
+.section4 button {
+    margin-left:200px;
+}
+
+
+.footer {
+    display:flex;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding: 0;
+}
+
+.footer p {
+    margin:20px auto;
+}
