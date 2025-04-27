@@ -1,5 +1,6 @@
 /* always defaykt margin and padding  */
 
+/* body */
 body {
     font-family: 'Roboto', Verdana, sans-serif;
     display: flex;
@@ -61,6 +62,7 @@ li a {
 }
 
 
+/* section1 */
 
 .section1 {
     display:flex;
@@ -70,6 +72,10 @@ li a {
     flex-basis : 0;   ➜ The div does not have a starting value as such and will 
                          take up screen as per the screen size available for
                          e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+
+    /* my understanding flex grow grow to take up extra space in section1
+    shrink shrink to take up less space if there is not enough in section1
+    flex basis 0 no intial preffered size distributed based on felx grow  */
     background-color: #1f2937;
     margin:0px;
     padding: 125px 0px;
@@ -111,170 +117,149 @@ li a {
     /* rounds corners */
 }
 
-.section2 {
-    background-color:aqua;
-    display:flex;
-    margin:0;
-    padding:0;
-    align-items: center;
-    flex-direction: column;
-    /* section 2 css */
-
-}
-
 .no-column-elements img {
     max-width:400px;
-    border-radius:20px;
+    max-height:400px;
+    border-radius:8px;
 }
 
-/* explanation of why i didnt need flex-direction column */
+
+/* section2 */
+
+.section2 {
+    color: #1f2937;
+    margin:0;
+    padding:50px 0px;
+    text-align:center;
+}
+
+
+/* explanation of why i didnt need flex-direction column
+because .column elements is not a flex element
+they behave like block elements 
+which stack vertically  */
 
 .section2 h1 {
+    font-size:24px;
     text-align: center;
 }
 
-.master-box {
+.container1 {
     display:flex;
+    justify-content: center;
+    align-items: center;
     gap:26px;
+    flex-wrap: wrap;
+    padding:50px 0px;
     
 }
 
-.master-subtext {
-    display:flex;
-    gap:32px;
-
+.box {
+    border: 2px solid #3882F6; 
+    border-radius: 8px; 
+    height: 100px; 
+    width: 100px;
+    /* roundend box */
 }
-
-
-/* so im thinking with mastr box and section 2 the boxes become flex elements of master box and then header and master box are flex elements of section 2 which works for column */
-
-
-/* .box {
-     ... other styles ...
-    border: 2px solid blue;  Creates the blue outline 
-    border-radius: 8px;  Creates the rounded corners 
-     ... other styles ... 
-    height:100px;
-    margin:16px;
-  } 
+  
 
 .subtext {
-     subtext css 
-} */
-
-/* gpt css just trying not much of a difference at all cant get close to the original  */
-.box {
-    border: 2px solid blue; /* Or a similar shade of blue */
-    border-radius: 16px; /* Or a similar level of roundedness */
-    height: 100px; /* Adjusts to content height */
-    width: 100px; /* Adjusts to content width or a set width */
-
-    /* NO MARGIN becuse gap on parent */
-
-    /* if i wanted content inside  */
-    display: flex; /* To control alignment of content inside */
-    flex-direction: column; /* Stack content vertically (illustration area, text) */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center the text within its own area */
-  }
-  
-
-  
-  .subtext {
-    font-size: 0.8em; /* Or a specific font size */
-    color: #333; /* Or a specific text color */
-    text-align: center;
-    /* inline level contnt not block so we dont need to align box again */
-  }
-
-  .section3 {
-    background-color: blueviolet;
-    display:flex;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .quote {
-    max-width:600px;
-    /* margin:1em auto; */
-    /* top bottom is 1 em if font size is 16px then em is 16px unique to css , auto left right distrube the horizontal space evenly on both sides  */
-
-  }
-
-  .quote blockquote {
-    margin: 0; /* Remove default top and bottom margin from blockquote */
-    padding: 0; /* Remove default padding from blockquote */
+    font-size: 16px; 
+    margin-top:110px;
 }
 
 
-  .quote p {
-    font-size: large;
-    margin:0;
-    padding:0;
-  }
+/* section3 */
+.section3 {
+    background-color: #e5e7eb;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
-  .quote figcaption{
-    font-size:1.1em;
-    font-weight:bold;
-    color:#333;
-    margin-left: 400px;
-    /* darker color */
-    margin-top: 0; /* Remove or reduce the space above figcaption */
-    padding: 0; /* Remove default padding from figcaption */
-  }
-  cite {
-    font-style: normal;
-    margin:0;
-    padding:0;
-    /* make fotn style normal incase it becomes italic from figcatpion */
-  }
+    margin:0px;
+    padding:0px;
+    text-align: center;
+}
+
+.quote {
+    max-width:600px;
+    font-weight:400px;
+    font-style:italic;
+    font-size: 24px;
+
+}
+
+.quote figcaption{
+    font-size:16px;
+    font-weight: bold;
+    text-align:right;
+
+    margin: 0px; 
+    padding: 0px; 
+}
+
+
 
 
 .section4 {
     display:flex;
-    background-color:lightblue;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    margin:0;
-    padding:0;
+
+    margin:100px;
+    padding:50px 0px;
 }
 
 .section4 .container {
+    background-color: #3882f6;
+    color: #f9faf8;
+    /* affects every text element in section */
+    flex:1;
+    /* elements grow shrink in container appropiately */
+
+    padding:50px 100px;
+    border-radius:8px;
+
     display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:20px auto;
-    padding:0;
-    border: 4px solid blue;
+    justify-content: space-between;
+    align-items:center;
 }
 
-.section4 .rectangle {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+.section4 h1 {
     margin:0;
-    padding:0;
-    flex-direction: column;
+    font-size:28px;
+    font-weight:400px;
+}
+
+.section4 p {
+    margin:0;
+    font-size:18px;
+    font-weight: 200px;
 }
 
 .section4 button {
-    margin-left:200px;
+    color: #f9faf8;
+    font-size:12px;
+    font-weight:600px;
+    background-color: #3882f6;
+    border-color: #f9faf8;
+    border-style:solid;
+    border-radius:8px;
+    padding:10px 20px;
 }
 
 
 .footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    
     display:flex;
-    background-color: bisque;
     justify-content: center;
     align-items: center;
-    margin:0;
-    padding: 0;
+    margin:0px;
+    padding:0px;
 }
 
 .footer p {
-    margin:20px auto;
+    margin:25px 0px;
 }
