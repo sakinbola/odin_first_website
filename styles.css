@@ -21,15 +21,18 @@ header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 25px;
+    padding: 25px 12vw;
+    /* if you want to change padding have to reafirm 12vw left right */
 }
 
 .header-logo {
     display:flex;
+    align-items: center;
+    justify-content: center;
+
     color: #f9faf8;
     font-size: 24px;
     font-weight: 800;
-    margin:0px;
     padding:0px;
 
 }
@@ -49,7 +52,6 @@ header {
     color: #f9faf8;
     font-size: 12px; 
     font-weight: bold;
-    margin:0px;
     padding:0px;
     gap:20px;
     list-style:none;
@@ -78,7 +80,7 @@ li a {
     flex basis 0 no intial preffered size distributed based on felx grow  */
     background-color: #1f2937;
     margin:0px;
-    padding: 125px 0px;
+    padding: 125px 12vw;
     justify-content: space-between;
     align-items:center;
     gap:50px
@@ -117,6 +119,9 @@ li a {
     /* rounds corners */
 }
 
+/* .no-column-elements {
+} */
+
 .no-column-elements img {
     max-width:400px;
     max-height:400px;
@@ -129,7 +134,7 @@ li a {
 .section2 {
     color: #1f2937;
     margin:0;
-    padding:50px 0px;
+    padding:50px 12vw;
     text-align:center;
 }
 
@@ -177,7 +182,6 @@ which stack vertically  */
     align-items: center;
 
     margin:0px;
-    padding:0px;
     text-align: center;
 }
 
@@ -207,7 +211,7 @@ which stack vertically  */
     align-items: center;
 
     margin:100px;
-    padding:50px 0px;
+    padding:50px 12vw;
 }
 
 .section4 .container {
@@ -257,7 +261,6 @@ which stack vertically  */
     justify-content: center;
     align-items: center;
     margin:0px;
-    padding:0px;
 }
 
 .footer p {
